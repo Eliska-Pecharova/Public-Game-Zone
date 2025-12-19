@@ -1,0 +1,173 @@
+:root {
+  --bc-color: #1a1e2c;
+  --color-title-button-1: #00ff14;
+  --icons: #9d00ff;
+  --buttons-title: #ff5e00;
+  --font: #ffffff;
+  --font-2: #cccccc;
+}
+
+/* Základní stylování */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: var(--bc-color);
+  height: 12vh;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.logo {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  color: var(--buttons-title);
+  font-family: "Luckiest Guy";
+}
+
+/* Střední část */
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-menu {
+  display: none; /* na mobilu menu schované */
+  list-style: none;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-button img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+/* Pravá část */
+.navbar-right {
+  display: none; /* na mobilu schovaná */
+}
+
+.personal-button,
+.search-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: white;
+  font-weight: bold;
+}
+
+.search-button {
+  border: 2px solid #00ff88;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+@media (min-width: 769px) {
+  .navbar {
+    height: 12vh;
+    justify-content: space-between;
+  }
+
+  /* leváčást: logo + název  */
+  .navbar-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    max-width: 300px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .site-title {
+    font-size: 2rem;
+    line-height: 1.2;
+    word-break: break-word;
+    text-align: left;
+  }
+
+  /* Menu odkazy */
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+    margin: 0 auto;
+    font-family: "Sansation";
+  }
+
+  .navbar-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .navbar-menu li a:hover {
+    text-decoration: underline;
+  }
+
+  /* Ikonka menu se schová */
+  .menu-button {
+    display: none;
+  }
+
+  /* Pravá část se zobrazí */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .personal-button img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .search-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 25px;
+    border: 2px solid #00ff88;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    border-radius: 37px;
+    cursor: pointer;
+  }
+
+  .search-button img {
+    display: none;
+    width: 24px;
+    height: 24px;
+  }
+
+  .search-button:hover {
+    background-color: #00ff88;
+    color: black;
+  }
+}

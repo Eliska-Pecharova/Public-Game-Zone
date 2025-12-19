@@ -1,0 +1,138 @@
+:root {
+  --bc-color: #1a1e2c;
+  --color-title-button-1: #00ff14;
+  --icons: #9d00ff;
+  --buttons-title: #ff5e00;
+  --font: #ffffff;
+  --font-2: #cccccc;
+}
+
+.categories {
+  padding: 24px 16px;
+  background-color: var(--bc-color);
+  text-align: center;
+  height: 15vh;
+}
+
+.categories-title {
+  display: none; /* na mobilu nepotřebujeme nadpis */
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.category-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-title-button-1);
+  color: black;
+  font-size: 1rem;
+  font-family: "Luckiest Guy", cursive;
+  padding: 5px 3px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-transform: uppercase;
+}
+
+/* obrázky na mobilu skryté */
+.category-button img {
+  display: none;
+}
+
+.category-button:hover {
+  transform: scale(1.05);
+  background-color: #03da15;
+}
+
+@media (min-width: 769px) {
+  .categories {
+    /* padding: 48px 22px; */
+    background-color: var(--bc-color);
+    text-align: center;
+    height: 20vh;
+  }
+
+  .categories-title {
+    font-size: 2.2rem;
+    font-family: "Sansation";
+    color: white;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 22px;
+    justify-items: center;
+  }
+
+  .category-button {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .img1 {
+    background-image: url("/images/cards.png");
+    z-index: 100;
+  }
+
+  .img2 {
+    background-image: url("/images/strategy.png");
+    z-index: 100;
+  }
+
+  .img3 {
+    background-image: url("/images/action.png");
+    z-index: 100;
+  }
+
+  .img4 {
+    background-image: url("/images/abstract.png");
+    z-index: 100;
+  }
+
+  .img5 {
+    background-image: url("/images/roll&write.png");
+    z-index: 100;
+  }
+
+  .img6 {
+    background-image: url("/images/other.png");
+    z-index: 100;
+  }
+
+  .category-button:hover {
+    transform: scale(1.05);
+  }
+
+  .category-button span {
+    position: absolute;
+    bottom: 0px;
+    left: 48px;
+    transform: translateX(-50%);
+    background-color: var(--color-title-button-1);
+    color: black;
+    font-size: 0.9rem;
+    font-family: "Luckiest Guy";
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}

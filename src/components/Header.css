@@ -1,0 +1,117 @@
+:root {
+  --bc-color: #1a1e2c;
+  --color-title-button-1: #00ff14;
+  --icons: #9d00ff;
+  --buttons-title: #ff5e00;
+  --font: #ffffff;
+  --font-2: #cccccc;
+}
+
+.header {
+  height: 30vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/images/bi.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Skryj textové prvky na mobilu */
+.header h1,
+.header p,
+.header-buttons,
+.scroll-down {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .header {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("/images/bi.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--font);
+    border-bottom: 1px solid var(--font-2);
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .header h1 {
+    display: block;
+    font-size: 4.5rem;
+    font-family: "Inter";
+    color: var(--color-title-button-1);
+    margin-bottom: 20px;
+    margin-top: 80px;
+  }
+
+  .header p {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--font-2);
+    max-width: 600px;
+    margin-bottom: 32px;
+  }
+
+  .header-buttons {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .games-btn {
+    background-color: var(--color-title-button-1);
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: "Sansation";
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .featured-btn {
+    background-color: var(--icons);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: "Sansation";
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .scroll-down {
+    display: block;
+    animation: bounce 2s infinite;
+  }
+
+  .scroll-down img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 20px;
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(8px);
+    }
+  }
+}

@@ -1,0 +1,62 @@
+:root {
+  --bc-color: #1a1e2c;
+  --color-title-button-1: #00ff14;
+  --icons: #9d00ff;
+  --buttons-title: #ff5e00;
+  --font: #ffffff;
+  --font-2: #cccccc;
+}
+
+/* Výchozí styl pro ikonku menu */
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-toggle img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Vysouvací menu */
+.mobile-menu {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  background-color: var(--bc-color);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 99;
+}
+
+.menu-btn {
+  padding: 12px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-family: "Sansation";
+}
+
+.menu-btn.home,
+.menu-btn.forums,
+.menu-btn.account {
+  background-color: var(--icons);
+}
+
+.menu-btn.games {
+  background-color: var(--buttons-title);
+}
+
+.menu-btn.search {
+  border: 2px solid var(--color-title-button-1);
+  background: transparent;
+  color: var(--font);
+}

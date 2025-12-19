@@ -1,0 +1,67 @@
+@media (min-width: 769px) {
+  .dashboard-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding: 48px 32px;
+    background-color: var(--bc-color);
+  }
+
+  .dashboard-box {
+    background-color: var(--box-bg, #222);
+    border-radius: 12px;
+    padding: 24px;
+    color: white;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .dashboard-box:hover {
+    transform: scale(1.02);
+  }
+
+  .dashboard-title {
+    font-size: 1.4rem;
+    font-family: "Sansation";
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+  }
+
+  .challenge-item {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    font-family: "Luckiest Guy";
+    background-color: #ff69b4;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: black;
+  }
+
+  .active-challenge {
+    border: 2px solid #4caf50;
+  }
+
+  .score-list,
+  .stats-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .dashboard-button {
+    margin-top: 16px;
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-family: "Luckiest Guy";
+    text-transform: uppercase;
+  }
+}
