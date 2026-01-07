@@ -14,6 +14,10 @@ Game canvas structure (Canvas).
 Game animation and responsive UI.
 Game logic, physics and game state management.
 
+Designový návrh:
+Tento projekt byl nejdříve navržen v nástroji Figma. Návrh si můžete prohlédnout zde: https://www.figma.com/design/fgQH0TinJ7rxCbsvZns6lG/Public-Games-Page--verze1?node-id=4-56&t=hUITbV4F13k8Af3D-1
+
+
 Autorka:
 
 Eliška Pecharová
